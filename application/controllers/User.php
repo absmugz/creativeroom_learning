@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Home extends CI_Controller {
+class User extends CI_Controller {
 
     function __construct() {
         parent::__construct();
@@ -15,10 +15,17 @@ class Home extends CI_Controller {
     }
 
     //the function that loads the first form<br><br>
-    public function index() {
 
-        $data['main_content'] = 'home';
-        $this->load->view('includes/template', $data);
+    public function register() {
+
+        $data['main_content'] = 'users/register';
+        $this->load->view('includes/users/template', $data);
+    }
+
+    public function login() {
+
+        $data['main_content'] = 'users/login';
+        $this->load->view('includes/users/template', $data);
     }
 
 }
