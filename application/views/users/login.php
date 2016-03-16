@@ -20,7 +20,7 @@
                         </div>
                         <a href="website-student-dashboard.html" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
                         <a href="#" class="forgot-password">Forgot password?</a>
-                        <a href="sign-up.html" class="link-text-color">Create account</a>
+                        <a href="register" class="link-text-color">Create account</a>
                     </div>
                 </div>
             </div>

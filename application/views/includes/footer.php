@@ -49,7 +49,7 @@
     </section>
     <!-- Footer -->
     <footer class="footer">
-        <strong>Learning</strong> v1.0.0 &copy; Copyright 2015
+        <strong>Creativeroom Learning</strong> &copy; Copyright 2015
     </footer>
     <!-- // Footer -->
     <!-- Inline Script for colors and config objects; used by various external scripts; -->
