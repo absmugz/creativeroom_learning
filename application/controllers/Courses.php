@@ -18,10 +18,22 @@ class Courses extends CI_Controller {
 
     public function index() {
 
-        $data['main_content'] = 'courses';
+        $data['main_content'] = 'courses/courses';
         $this->load->view('includes/template', $data);
     }
 
+    public function view() {
+
+        $data['main_content'] = 'courses/course_veiw';
+        $this->load->view('includes/template', $data);
+    }
+
+    public function take() {
+
+        $data['main_content'] = 'courses/take_course_view';
+        $this->load->view('includes/template', $data);
+    }
+    
 
 
 }

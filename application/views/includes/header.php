@@ -112,12 +112,11 @@
                 <ul class="nav navbar-nav navbar-nav-margin-left">
                   
                     <li class="dropdown">
-                        <a href="courses">Courses</a>
-                        
-                    </li>
+                        <a href="<?php echo base_url('courses'); ?>">Courses</a>
+ </li>
                    
                     <li class="dropdown">
-                        <a href="#">Instructor</a>
+                         <a href="<?php echo base_url('instructor'); ?>">Instructor</a>
                       
                     </li>
                   
@@ -138,7 +137,8 @@
                         </li>
                         <!-- // END user -->
                     </ul>
-                    <a href="user/login" class="navbar-btn btn btn-primary">Log In</a>
+                   
+                    <a href="<?php echo base_url('user/login'); ?>" class="navbar-btn btn btn-primary">Log In</a>
                 </div>
             </div>
             <!-- /.navbar-collapse -->
