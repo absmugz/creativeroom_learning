@@ -129,10 +129,10 @@
                                 <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="website-student-dashboard.html"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
-                                <li><a href="website-student-courses.html"><i class="fa fa-mortar-board"></i> My Courses</a></li>
-                                <li><a href="website-student-profile.html"><i class="fa fa-user"></i> Profile</a></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+                                <li><a href="<?php echo base_url('user'); ?>"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+                                <li><a href="<?php echo base_url('user/my_courses'); ?>"><i class="fa fa-mortar-board"></i> My Courses</a></li>
+                                <li><a href="<?php echo base_url('user/profile'); ?>"><i class="fa fa-user"></i> Profile</a></li>
+                                <li><a href="<?php echo base_url('user/logout'); ?>"><i class="fa fa-sign-out"></i> Logout</a></li>
                             </ul>
                         </li>
                         <!-- // END user -->
