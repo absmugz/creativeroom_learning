@@ -122,14 +122,15 @@
                   
                 </ul>
                 <div class="navbar-right">
+                    <?php if ($loggedin): ?>
                     <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
                         <!-- user -->
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+<img src="<?php echo base_url('assets/images/people/110/guy-6.jpg'); ?>" alt="" class="img-circle" /> <?php echo $user->first_name; ?><span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="<?php echo base_url('user'); ?>"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+                                <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
                                 <li><a href="<?php echo base_url('user/my_courses'); ?>"><i class="fa fa-mortar-board"></i> My Courses</a></li>
                                 <li><a href="<?php echo base_url('user/profile'); ?>"><i class="fa fa-user"></i> Profile</a></li>
                                 <li><a href="<?php echo base_url('user/logout'); ?>"><i class="fa fa-sign-out"></i> Logout</a></li>
@@ -137,8 +138,9 @@
                         </li>
                         <!-- // END user -->
                     </ul>
-                   
+                   <?php else: ?>  
                     <a href="<?php echo base_url('user/login'); ?>" class="navbar-btn btn btn-primary">Log In</a>
+                    <?php endif; ?>
                 </div>
             </div>
             <!-- /.navbar-collapse -->

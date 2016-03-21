@@ -15,12 +15,18 @@ class Courses extends CI_Controller {
     }
 
     //the function that loads the first form<br><br>
-
     public function index() {
-
-        $data['main_content'] = 'courses/courses';
+        if ($this->ion_auth->logged_in()) {
+            $loggedin = TRUE;
+        } else {
+            $loggedin = FALSE;
+        }
+        $data['user'] = $this->ion_auth->user()->row();
+        $data['loggedin'] = $loggedin;
+       $data['main_content'] = 'courses/courses';
         $this->load->view('includes/template', $data);
     }
+
 
     public function view() {
 

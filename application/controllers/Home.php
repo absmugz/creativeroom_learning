@@ -16,7 +16,13 @@ class Home extends CI_Controller {
 
     //the function that loads the first form<br><br>
     public function index() {
-
+        if ($this->ion_auth->logged_in()) {
+            $loggedin = TRUE;
+        } else {
+            $loggedin = FALSE;
+        }
+        $data['user'] = $this->ion_auth->user()->row();
+        $data['loggedin'] = $loggedin;
         $data['main_content'] = 'home';
         $this->load->view('includes/template', $data);
     }
