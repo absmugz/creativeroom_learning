@@ -4,35 +4,48 @@
                 <div class="panel panel-default text-center paper-shadow" data-z="0.5">
                     <h1 class="text-display-1">Create account</h1>
                     <div class="panel-body">
+                          
                         <!-- Signup -->
-                        <form role="form" action="index.html">
+                       
+                             
+                                   <?php 
+                                   $attributes = array('role' => 'form');
+echo form_open('register', $attributes); 
+                                   ?>
+                            
                             <div class="form-group">
                                 <div class="form-control-material">
-                                    <input id="firstName" type="text" class="form-control" placeholder="First Name">
+                                    <input name="first_name" id="firstName" type="text" class="form-control" placeholder="First Name">
                                     <label for="firstName">First name</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-control-material">
-                                    <input id="lastName" type="text" class="form-control" placeholder="Last Name">
+                                    <input name="last_name" id="lastName" type="text" class="form-control" placeholder="Last Name">
                                     <label for="lastName">Last name</label>
+                                </div>
+                            </div>
+                        <div class="form-group">
+                                <div class="form-control-material">
+                                    <input name="username" id="username" type="text" class="form-control" placeholder="Username">
+                                    <label for="username">Username</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-control-material">
-                                    <input id="email" type="email" class="form-control" placeholder="Email">
+                                    <input name="email" id="email" type="email" class="form-control" placeholder="Email">
                                     <label for="email">Email address</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-control-material">
-                                    <input id="password" type="password" class="form-control" placeholder="Password">
+                                    <input name="password" id="password" type="password" class="form-control" placeholder="Password">
                                     <label for="password">Password</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-control-material">
-                                    <input id="passwordConfirmation" type="password" class="form-control" placeholder="Password Confirmation">
+                                    <input name="confirm_password" id="passwordConfirmation" type="password" class="form-control" placeholder="Password Confirmation">
                                     <label for="passwordConfirmation">Re-type password</label>
                                 </div>
                             </div>
@@ -43,9 +56,12 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a href="website-student-dashboard.html" class="btn btn-primary">Create an Account</a>
+                               
+                                <button type="submit" class="btn btn-primary">Create an Account</button>
+
+                    <?php echo form_close(); ?>
                             </div>
-                        </form>
+                     
                         <!-- //Signup -->
                     </div>
                 </div>
