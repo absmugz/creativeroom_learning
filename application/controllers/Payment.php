@@ -27,20 +27,9 @@ $course_name = $this->input->post('course_name');
 $bank_info = $this->input->post('bank_info');
 
 //var_dump($user->email);die();
-//$this->load->library('email');
+$this->load->library('email');
 
-//set email library configuration
- $config = Array(
- 'protocol' => 'smtp',
- 'smtp_host' => 'ssl://smtp.googlemail.com',
- 'smtp_port' => 465,
- 'smtp_user' => 'absmugz09@gmail.com',
- 'smtp_pass' => 'makabongwe@01',
- );
- 
- //load email library
- $this->load->library('email', $config);
- 
+
 $this->email->from('absmugz09@gmail.com', 'Absolom');
 $this->email->to($user->email);
 
@@ -50,8 +39,8 @@ $this->email->message('Thank you for registering for'.$course_name.'Please use t
 
 $this->email->send();
 
-//echo 'You have been activated';
-
+$RESPONDE = 'Thank you for ordering this course, an email with the banking details and the reference number has been sent to your email, once you have paid it takes up to 48 hours for us to activate, if you send us proof of payment it will be instant. Happy learning ! Or use the details below for your payment.';
+echo json_encode($RESPONDE);
 
 
 } 

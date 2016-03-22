@@ -7,24 +7,25 @@
                <div class="panel panel-default curriculum open paper-shadow" data-z="0.5">   
                    <div class="tab-content">
                        
-                       <div class="panel-heading">
+                     
+                            <div id="account" class="tab-pane active">
+                                
+                                  <div class="panel-heading">
                            <h5 class="text-subhead">Payment details</h5>
                         <h5 class="text-subhead">You would like to pay for <?php echo ($course->name); ?></h5>
                         <h5 class="text-subhead">Reference number : <?php echo ($order_ref); ?></h5>
                     </div>
-                            <div id="account" class="tab-pane active">
-                                
                                     
                                    <?php 
                                    $attributes = array('class' => 'form-horizontal');
-echo form_open('payment/checkout', $attributes); 
+echo form_open('', $attributes); 
                                    ?>
                                     
                                  
 
                                     
-<input type="hidden" name="order_ref" value="<?php echo ($course->name); ?>" />
-<input type="hidden" name="course_name" value="<?php echo ($order_ref); ?>" />
+                                <input type="hidden" id="order_ref" name="order_ref" value="<?php echo ($order_ref); ?>" />
+                                <input type="hidden" id="course_name" name="course_name" value="<?php echo ($course->name); ?>" />
 
 <div class="form-group">
                                         <div class="col-md-offset-2 col-md-6">
@@ -53,7 +54,7 @@ echo form_open('payment/checkout', $attributes);
                                    
                                     <div class="form-group margin-none">
                                         <div class="col-md-offset-2 col-md-10">
-                                            <button type="submit" class="btn btn-primary paper-shadow relative" data-z="0.5" data-hover-z="1" data-animated>Confirm</button>
+                                            <button type="submit" class="btn btn-primary paper-shadow relative confirm" data-z="0.5" data-hover-z="1" data-animated>Confirm</button>
                                         </div>
                                     </div>
                                 </form>

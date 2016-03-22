@@ -117,6 +117,7 @@
         module-bundle-main.js already includes theme-core.js so this should be loaded
         ONLY when using the standalone modules; -->
     <script type="text/javascript" src="<?php echo base_url("assets/js/theme-core.min.js"); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url("assets/js/custom.js"); ?>"></script>
     
 </body>
 </html>
