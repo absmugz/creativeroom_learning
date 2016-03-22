@@ -122,7 +122,8 @@
                   
                 </ul>
                 <div class="navbar-right">
-                    <?php if ($loggedin): ?>
+                    
+                    <?php if($this->ion_auth->logged_in()): ?>
                     <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
                         <!-- user -->
                         <li class="dropdown user">
